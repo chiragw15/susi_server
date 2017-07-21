@@ -14,6 +14,7 @@ RUN git clone https://github.com/chiragw15/susi_server.git
 WORKDIR susi_server
 RUN git submodule update --recursive --remote
 RUN git submodule update --init --recursive
+RUN git checkout kubernetes2
 
 # compile
 RUN ./gradlew build -x test
