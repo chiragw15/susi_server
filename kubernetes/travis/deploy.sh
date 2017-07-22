@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export DEPLOY_BRANCH=${DEPLOY_BRANCH:-development}
+export DEPLOY_BRANCH=${DEPLOY_BRANCH:-kubernetes4}
 
 if [ "$TRAVIS_REPO_SLUG" != "chiragw15/susi_server" -o  "$TRAVIS_BRANCH" != "$DEPLOY_BRANCH" ]; then
     echo "Skip production deployment for a very good reason."
