@@ -20,7 +20,7 @@ RUN git clone https://github.com/chiragw15/susi_server.git /susi_server
 WORKDIR /susi_server
 
 RUN git checkout ${BRANCH}
-RUN if [ -v COMMIT_HASH ]; then git reset --hard ${COMMIT_HASH} fi
+RUN if [ -v COMMIT_HASH ] ; then git reset --hard ${COMMIT_HASH} ; fi
 
 RUN git submodule update --recursive --remote
 RUN git submodule update --init --recursive
